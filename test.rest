@@ -1,0 +1,38 @@
+@host=http://127.0.0.1:5000
+
+
+### Create an item
+POST {{host}}/transactions
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "cat_id": 2,
+    "amount": 50.00,
+    "description": "Grocery shopping",
+    "trans_date": "2023-12-10"
+}
+
+### Read all items
+GET {{host}}/transactions
+Content-Type: application/json
+
+### Read single item by id
+GET {{host}}/transactions/2  
+Content-Type: application/json
+
+### Update an item
+PUT {{host}}/transactions/1
+Content-Type: application/json 
+ 
+{
+    "user_id": 1,
+    "cat_id": 2,
+    "amount": 100.00,
+    "description": "Grocery shopping",
+    "trans_date": "2023-12-10"
+}
+
+### Delete an item
+DELETE {{host}}/transactions/1
+Content-Type: application/json
