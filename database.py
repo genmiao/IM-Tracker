@@ -1,15 +1,15 @@
-mysql = None #store the data, GLOBAL MYSQL VARIABLE
+mysql = None
 
-def set_mysql(mysql_instance): #update mysql global variable
+def set_mysql(mysql_instance):
     global mysql
     mysql = mysql_instance
-
-def get_mysql(): #return mysql
+    
+def get_mysql():
     global mysql
     return mysql
 
 def get_connection():
-    return get_mysql().connection    #returns global variable, and connection
+    return get_mysql().connection
 
 def get_cursor():
     return get_connection().cursor()
