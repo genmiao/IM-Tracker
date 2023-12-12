@@ -6,8 +6,7 @@ POST {{host}}/transactions
 Content-Type: application/json
 
 {
-    "user_id": 1,
-    "cat_id": 2,
+    "budget_id": 2,
     "amount": 50.00,
     "description": "Grocery shopping",
     "trans_date": "2023-12-10"
@@ -18,21 +17,102 @@ GET {{host}}/transactions
 Content-Type: application/json
 
 ### Read single item by id
-GET {{host}}/transactions/2  
+GET {{host}}/transactions/7  
 Content-Type: application/json
 
 ### Update an item
-PUT {{host}}/transactions/1
+PUT {{host}}/transactions/8
 Content-Type: application/json 
  
 {
-    "user_id": 1,
-    "cat_id": 2,
-    "amount": 100.00,
-    "description": "Grocery shopping",
+    "budget_id": 1,
+    "amount": 1000.00,
+    "description": "Shopping",
     "trans_date": "2023-12-10"
 }
 
 ### Delete an item
-DELETE {{host}}/transactions/1
+DELETE {{host}}/transactions/3
 Content-Type: application/json
+
+
+
+
+
+
+
+
+### Create an item
+POST {{host}}/budgets
+Content-Type: application/json
+
+{
+    "category": "TESTING",
+    "amount": "10000.00"
+} 
+
+### Read all items
+GET {{host}}/budgets
+Content-Type: application/json
+
+### Read single item by id
+GET {{host}}/budgets/2
+Content-Type: application/json
+
+### Update an item
+PUT {{host}}/budgets/2
+Content-Type: application/json 
+ 
+{
+    "category": "TEST",
+    "amount": "1000.00"
+}
+
+### Delete an item
+DELETE {{host}}/budgets/12
+Content-Type: application/json
+
+
+
+#### U S E R S
+
+### Create an item
+POST {{host}}/users
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "password": "secure_password",
+  "email": "john.doe@example.com"
+}
+
+
+### Read all items
+GET {{host}}/users
+Content-Type: application/json
+
+
+### Read single item by id
+GET {{host}}/users/1
+Content-Type: application/json
+
+
+### Update an item
+PUT {{host}}/users/1
+Content-Type: application/json
+
+{
+  "new_username": "updated_john_doe",
+  "new_password": "updated_secure_password",
+  "new_email": "updated_john.doe@example.com"
+}
+
+
+### Delete an item
+DELETE {{host}}/users/7
+Content-Type: application/json
+
+
+
+
+
